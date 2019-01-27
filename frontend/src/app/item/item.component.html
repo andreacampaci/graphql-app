@@ -1,0 +1,14 @@
+<div class="card my-2" style="width: 100%">
+  <div class="card-header">
+    <button class="btn btn-success btn-sm mr-1" (click)="upvote(course.id)" style="width: 30px">+</button>
+    <button class="btn btn-danger btn-sm mr-2" (click)="downvote(course.id)" style="width: 30px">-</button>
+    <strong>Points: </strong> {{course.voteCount}}
+  </div>
+  <div class="card-body">
+    <div class="text-right badge-secondary badge">{{ course.topic }}</div>
+    <h5 class="card-title">{{course.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">by {{course.author}}</h6>
+    <p class="card-text">{{course.description}}</p>
+    <a href="{{course.url}}" class="card-link">Go to course ...</a>
+  </div>
+</div>
